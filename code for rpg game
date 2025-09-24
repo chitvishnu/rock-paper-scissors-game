@@ -1,0 +1,30 @@
+import random
+while True:
+  moj={'r':'🪨' ,'s' :'✂','p':'📄'}
+
+  choices=('r','p','s')
+
+  player_input=input('Rock ,paper,or,scissors(r/p/s): ').lower()
+  if player_input not in choices:
+    print("Invalid choice!")
+
+  game_choice=random.choice(choices)
+
+  print(f'you choose{moj[player_input]}')
+  print(f'computer choose{moj[game_choice]}')
+
+  if player_input== game_choice:
+    print("Tie!")
+  elif player_input=='r' and game_choice=='s':
+    print("hurrrah u won🥳")
+  elif player_input=='p' and game_choice=='r':
+    print("hurrrah u won🥳")
+  elif player_input=='s' and game_choice=='p':
+    print("hurrrah u won🥳")
+  else:
+    print("u lost ")
+        
+  play_again=input("Do u wanna play agian (yes/no): ").lower()
+  if play_again!="yes":
+     print("Thanks for playing!")
+     break
